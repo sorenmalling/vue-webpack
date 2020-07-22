@@ -43,5 +43,12 @@ module.exports = {
         },
     ]
     },
+    devServer: {
+        proxy: {
+          '/**': {  //catch all requests
+            target: 'public/index.html',  //default target
+          }
+        }
+    },
     plugins: plugins
 }
